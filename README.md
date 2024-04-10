@@ -2,14 +2,12 @@
 
 ## elastic run
 
-### start
+### start and setup with tls
 
-```shell
-docker-compose -f docker/docker-compose.yml up -d
 ```
-
-### stop
-
-```shell
-docker-compose -f docker/docker-compose.yml down
+docker-compose \
+-f docker-compose.yml \
+-f extensions/fleet/fleet-compose.yml \
+-f extensions/fleet/agent-apmserver-compose.yml \
+up
 ```
